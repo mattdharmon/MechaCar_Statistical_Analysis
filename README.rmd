@@ -5,6 +5,8 @@ output: github_document
 ```{r, include = FALSE}
 library('dplyr')
 ```
+## Linear Regression to Predict MPG
+
 ```{r, echo = FALSE, message = FALSE}
 mecha_car<-read.csv('MechaCar_mpg.csv')
 

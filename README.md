@@ -1,6 +1,8 @@
 MechaCar Statistical Analysis
 ================
 
+## Linear Regression to Predict MPG
+
     ## 
     ## Call:
     ## lm(formula = mecha_car$mpg ~ mecha_car$AWD + mecha_car$ground_clearance + 
