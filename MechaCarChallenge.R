@@ -33,5 +33,9 @@ suspension_coil_data %>%
     SD = sd(PSI)
   )->lot_summary
 
-
-
+# T-Tests on Suspension Coils
+t.test(
+  suspension_coil_data$PSI,
+  subset = suspension_coil_data$Manufacturing_Lot,
+  mu = 1500
+)

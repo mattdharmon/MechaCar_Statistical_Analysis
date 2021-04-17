@@ -53,3 +53,20 @@ individually? Why or why not?
 
 -   In total? Yes. However, that variance is increased heavily in Lot 3,
     where the variance is a bit over 170.
+
+## T-Tests on Suspension Coils
+
+    ## 
+    ##  One Sample t-test
+    ## 
+    ## data:  suspension_coil_data$PSI
+    ## t = -1.8931, df = 149, p-value = 0.06028
+    ## alternative hypothesis: true mean is not equal to 1500
+    ## 95 percent confidence interval:
+    ##  1497.507 1500.053
+    ## sample estimates:
+    ## mean of x 
+    ##   1498.78
+
+H<sub>1</sub>: We reject the alternative hypothesis since the true mean
+is not equal to 1500.
