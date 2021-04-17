@@ -70,3 +70,10 @@ individually? Why or why not?
 
 H<sub>1</sub>: We reject the alternative hypothesis since the true mean
 is not equal to 1500.
+
+## Study Design: MechaCar vs Competition
+
+It would be great to test the mpg of our vehicles to the competition
+with similar designs. I would predict that similar designs would be
+equal in mpg to our designs. We would need to gather the data in the
+same fashion that MechaCar has and run it against our own data.
