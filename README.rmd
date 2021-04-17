@@ -22,4 +22,31 @@ lm(mecha_car$mpg~mecha_car$AWD +
 
 All-wheel drive and spoiler angle seem to have the most significance to mpg. The slope is not 0 since the p-value is less than 0.05. From our linear model, the r-squared is 0.71, which means that roughly 71% of all mpg predictions will be correct when using this linear model.
 
+## Summary Statistics on Suspension Coils
+```{r echo = FALSE, message = FALSE}
+'Suspension_Coil.csv' %>%
+  read.csv()->suspension_coil_data
 
+suspension_coil_data %>%
+  summarise(
+    Mean = mean(PSI),
+    Median = median(PSI),
+    Variance = var(PSI),
+    SD = sd(PSI)
+  )
+
+```
+```{r echo = FALSE, message = FALSE}
+suspension_coil_data %>%
+    group_by(Manufacturing_Lot) %>%
+    summarise(
+      Mean = mean(PSI),
+      Median = median(PSI),
+      Variance = var(PSI),
+      SD = sd(PSI)
+    )
+```
+
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
+
+- In total? Yes. However, that variance is increased heavily in Lot 3, where the variance is a bit over 170.

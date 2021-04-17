@@ -32,3 +32,24 @@ All-wheel drive and spoiler angle seem to have the most significance to
 mpg. The slope is not 0 since the p-value is less than 0.05. From our
 linear model, the r-squared is 0.71, which means that roughly 71% of all
 mpg predictions will be correct when using this linear model.
+
+## Summary Statistics on Suspension Coils
+
+    ##      Mean Median Variance       SD
+    ## 1 1498.78   1500 62.29356 7.892627
+
+    ## # A tibble: 3 x 5
+    ##   Manufacturing_Lot  Mean Median Variance     SD
+    ##   <chr>             <dbl>  <dbl>    <dbl>  <dbl>
+    ## 1 Lot1              1500   1500     0.980  0.990
+    ## 2 Lot2              1500.  1500     7.47   2.73 
+    ## 3 Lot3              1496.  1498.  170.    13.0
+
+The design specifications for the MechaCar suspension coils dictate that
+the variance of the suspension coils must not exceed 100 pounds per
+square inch. Does the current manufacturing data meet this design
+specification for all manufacturing lots in total and each lot
+individually? Why or why not?
+
+-   In total? Yes. However, that variance is increased heavily in Lot 3,
+    where the variance is a bit over 170.

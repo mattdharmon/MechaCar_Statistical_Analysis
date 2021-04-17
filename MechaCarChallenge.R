@@ -1,5 +1,6 @@
 library('dplyr')
 
+# MechaCar MPG prediction
 mecha_car<-read.csv('MechaCar_mpg.csv')
 
 mecha_car_lm<-lm(mecha_car$mpg~mecha_car$AWD +
@@ -10,3 +11,27 @@ mecha_car_lm<-lm(mecha_car$mpg~mecha_car$AWD +
    mecha_car)
 
 summary(mecha_car_lm)
+
+# Summary Statistics on Suspension Coils
+'Suspension_Coil.csv' %>%
+  read.csv()->suspension_coil_data
+
+suspension_coil_data %>%
+  summarise(
+    Mean = mean(PSI),
+    Median = median(PSI),
+    Variance = var(PSI),
+    SD = sd(PSI)
+  )->total_summary
+
+suspension_coil_data %>%
+  group_by(Manufacturing_Lot) %>%
+  summarise(
+    Mean = mean(PSI),
+    Median = median(PSI),
+    Variance = var(PSI),
+    SD = sd(PSI)
+  )->lot_summary
+
+
+
